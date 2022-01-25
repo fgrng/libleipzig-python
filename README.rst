@@ -42,15 +42,25 @@ Baseform(*vectors, **options)
 
 .. **
 
+In Python 3, you omit the unicode prefixes. Python 3 is recommended for better support of extended Latin and other alphabets.
+
 Dependencies
 ------------
 
-- Python 2.5 or later 2.x releases
-- Setuptools_
-- suds_ 0.3.9 or later
+- Python 2:
+  * Python 2.5 or later 2.x releases
+  * Setuptools_
+  * `suds 0.3.9`_ or later
+
+- Python 3:
+  * Python 3.0 or later
+  * Distribute_
+  * `suds 0.4.2`_ or later
 
 .. _Setuptools: http://packages.python.org/distribute/
-.. _suds: https://fedorahosted.org/suds/#Resources
+.. _suds 0.3.9: https://fedorahosted.org/suds/#Resources
+.. _Distribute: http://packages.python.org/distribute
+.. _suds 0.4.2: https://bitbucket.org/pladay/suds
 
 Service calls
 -------------
@@ -161,6 +171,12 @@ program will terminate with exit code 1.  If the remote server reported failure
 
 Changelog
 ---------
+
+1.4
+  * Added support for Python 3.
+  * Now requires suds 0.4.2 or later for Python 3.
+  * Moved to distribute (Python 3 capable fork of setuptools)
+  * Updated various classifiers and tags for distribute.
 
 1.3.1
   * Added service listing to ``wortschatz`` script.
